@@ -13,7 +13,7 @@
     ```
 4. Check out the project onto your pi
    ```shell
-   git clone https://github.com/pitography/BerryCamExpress.git
+   git clone https://github.com/stevies/berrycam-aurelia-v2.git
    ```
 
 4. From the project folder, execute the following commands:

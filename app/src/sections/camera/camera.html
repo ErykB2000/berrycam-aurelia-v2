@@ -1,0 +1,24 @@
+<template>
+
+  <section class="camera-settings container">
+    <camera-controls items.bind="cameraSettings" title.bind="'Camera Settings'"></camera-controls>
+    <camera-controls items.bind="imageSettings" title.bind="'Image Settings'"></camera-controls>
+    <camera-controls items.bind="imageAdjustments" title.bind="'Image Adjustments'"></camera-controls>
+    <fx-controls items.bind="fx" title.bind="'Image Effects'"></fx-controls>
+  </section>
+
+  <section class="camera-settings container">
+    <button disabled.bind="isBusy" click.trigger="resetCameraSettings()">Reset camera settings</button>
+    <button disabled.bind="isBusy" click.trigger="doShutterPress()">Take photograph
+      <activity-indicator></activity-indicator>
+    </button>
+  </section>
+
+  <template if.bind="!!currentImageFullPath">
+    <h3>${message}</h3>
+    <img src.bind="currentImageFullPath">
+    <br>
+    <button click.trigger="clearPhoto()">Clear photo</button>
+  </template>
+
+</template>

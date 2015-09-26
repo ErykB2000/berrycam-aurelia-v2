@@ -1,0 +1,12 @@
+<template>
+
+  <div class="camera-controls">
+    <h2>${title}</h2>
+    <div>
+      <select value.bind="items.selected">
+        <option repeat.for="item of items.values" value.bind="item">${item}</option>
+      </select>
+    </div>
+  </div>
+
+</template>
